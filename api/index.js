@@ -1,6 +1,9 @@
-import express from 'express'
 import mongoose from 'mongoose'
+import express from 'express'
 import lifecycle from './middleware/lifecycle.js'
+import Champions from '../models/champions.js'
+import Items from '../models/items.js'
+import '../db/seed.js'
 
 const app = express()
 
