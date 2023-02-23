@@ -1,36 +1,37 @@
-import mongoose from '../db/connection.js'
+import mongoose from 'mongoose'
 
-export const champSchema = new mongoose.Schema({
-  name: { type: String },
-  title: { type: String },
-  lore: { type: String },
-  blurb: { type: String },
-  tags: [{ type: String }],
-  partype: { type: String },
-  stats: [
-    {
-      hp: { type: Number },
-      hpperlevel: { type: Number },
-      mp: { type: Number },
-      mpperlevel: { type: Number },
-      movespeed: { type: Number },
-      armor: { type: Number },
-      armorperlevel: { type: Number },
-      spellblock: { type: Number },
-      spellblockperlevel: { type: Number },
-      attackrange: { type: Number },
-      hpregen: { type: Number },
-      hpregenperlevel: { type: Number },
-      mpregen: { type: Number },
-      mpregenperlevel: { type: Number },
-      crit: { type: Number },
-      critperlevel: { type: Number },
-      attackdamage: { type: Number },
-      attackdamageperlevel: { type: Number },
-      attackspeedperlevel: { type: Number },
-      attackspeed: { type: Number },
-    },
-  ],
+const champSchema = new mongoose.Schema({
+  name: String,
+  title: String,
+  blurb: String,
+  difficulty: Number,
+  splash: String,
+  loading: String,
+  icon: String,
+  tags: [String],
+  partype: String,
+  stats: {
+    hp: Number,
+    hpperlevel: Number,
+    mp: Number,
+    mpperlevel: Number,
+    movespeed: Number,
+    armor: Number,
+    armorperlevel: Number,
+    spellblock: Number,
+    spellblockperlevel: Number,
+    attackrange: Number,
+    hpregen: Number,
+    hpregenperlevel: Number,
+    mpregen: Number,
+    mpregenperlevel: Number,
+    crit: Number,
+    critperlevel: Number,
+    attackdamage: Number,
+    attackdamageperlevel: Number,
+    attackspeedperlevel: Number,
+    attackspeed: Number
+  },
 })
 
-export default mongoose.model('champions', champSchema)
+export default mongoose.model('Champion', champSchema)

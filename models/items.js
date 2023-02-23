@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
-export const itemSchema = new mongoose.Schema({
+const itemSchema = new mongoose.Schema({
 
 })
 
-export default mongoose.model('items', itemSchema)
+export default mongoose.model('Item', itemSchema)

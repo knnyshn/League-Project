@@ -3,35 +3,11 @@
 ## LEAGUE TEAM BUILDER ##
 
 ## Description ##
-The backend for a league team builder. Will have database / JSON of the full list of champions and items. The purpose is to create a team builder where you can choose all the champions and itemize said champions. The backend will incorporate all the boilerplate files associated with champions and items respectively.
 
 ## API ##
-Champions: http://ddragon.leagueoflegends.com/cdn/13.3.1/data/en_US/champion.json
-Champion Details: http://ddragon.leagueoflegends.com/cdn/13.3.1/data/en_US/champion/Aatrox.json
-Champion Splash: http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg
-Champion Icons: http://ddragon.leagueoflegends.com/cdn/13.3.1/img/champion/Aatrox.png
-Items: http://ddragon.leagueoflegends.com/cdn/13.3.1/data/en_US/item.json
-Item Icons: http://ddragon.leagueoflegends.com/cdn/13.3.1/img/item/1001.png
 
 ## API SNIPPET ##
 
-```js
-async function champAPI(champ) {
-    const url = `http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion/${champ}.json`
-    
-      try {
-        const res = await fetch(url);
-        const json = await res.json();
-        console.log(json);
-        return json;
-    
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    
-    champAPI("Fizz");
-```
 ## MVP ##
 Implement an itemization option. For your team of five. Possibly implement an enemy team as well.
 
