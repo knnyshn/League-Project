@@ -1,12 +1,12 @@
 import { Router } from 'express'
-import * as controllers from '../models/champions.js'
+import * as controller from '../controllers/champController.js'
 
-const router = Router()
+const champRouter = Router()
 
-router.get('/', controllers.getCharacters)
-router.get('/:id', controllers.getCharacter)
-router.post('/', controllers.createCharacter)
-router.put('/:id', controllers.updateCharacter)
-router.delete('/:id', controllers.deleteCharacter)
+champRouter.get('/', controller.getChampions)
+champRouter.get('/:id', controller.getChampion)
+champRouter.post('/', controller.createChampion)
+champRouter.put('/:id', controller.updateChampion)
+champRouter.delete('/:id', controller.deleteChampion)
 
-export default router
+export default champRouter

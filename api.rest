@@ -13,3 +13,7 @@ GET {{baseUrl}}
 ###
 
 
+
+
+# @name getChampion
+GET {{baseUrl}}/Tim

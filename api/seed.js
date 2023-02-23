@@ -7,16 +7,15 @@ import mongoose from 'mongoose'
 //@ts-ignore
 mongoose.connect(process.env.DATABASE_URL)
 await seed()
-await mongoose.disconnect()
 
 async function seed() {
+  await Champion.deleteMany({})
+  await Champion.insertMany(champData)
   // Seed the database here
-  
 }
+await mongoose.disconnect()
 
-const champs = Object.values(champData.data)
-await Champion.deleteMany({})
-await Champion.insertMany(champs)
+// const champs = Object.values(champData.data)
 
 // DEAD
 // import mongoose from 'mongoose';

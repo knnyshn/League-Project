@@ -1,16 +1,17 @@
 import mongoose from 'mongoose'
 
 const champSchema = new mongoose.Schema({
+  id: String,
   name: String,
   title: String,
-  blurb: String,
+  lore: String,
   difficulty: Number,
   splash: String,
   loading: String,
   icon: String,
   tags: [String],
   partype: String,
-  stats: {
+  stats: [{
     hp: Number,
     hpperlevel: Number,
     mp: Number,
@@ -31,7 +32,7 @@ const champSchema = new mongoose.Schema({
     attackdamageperlevel: Number,
     attackspeedperlevel: Number,
     attackspeed: Number
-  },
+  }],
 })
 
 export default mongoose.model('Champion', champSchema)
