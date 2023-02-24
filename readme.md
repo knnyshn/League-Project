@@ -1,6 +1,6 @@
 > [Template Used](https://github.com/metruzanca/ga-vercel-demo)
 
-## LEAGUE TEAM BUILDER ##
+## League of Legends Champion Compendium ##
 
 ## Description ##
 
@@ -9,7 +9,6 @@
 ## API SNIPPET ##
 
 ## MVP ##
-Implement an itemization option. For your team of five. Possibly implement an enemy team as well.
 
 ## POST MVP ##
 Really polished front end.

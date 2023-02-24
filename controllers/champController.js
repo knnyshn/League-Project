@@ -41,7 +41,7 @@ export const updateChampion = async (req, res) => {
   try {
     const { id } = req.params
     const character = await Champion.findByIdAndUpdate(id, req.body)
-    res.status(201).json(character)
+    await res.status(201).json(character)
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: error.message })

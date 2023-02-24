@@ -9,11 +9,41 @@
 
 @baseUrl = {{host}}/api/
 
+# @name getChampions
 GET {{baseUrl}}
 ###
 
-
-
-
 # @name getChampion
-GET {{baseUrl}}/Tim
+GET {{baseUrl}}/Lissandra
+###
+
+# @name createChampion
+POST {{baseUrl}}/
+Content-Type: application/json
+
+
+    {
+    "id": "Zanca",
+    "name": "Zanca",
+    "title": "the Removed Godskin Brother",
+    "lore": "Do whatever.",
+    "allytips": "Don't touch his glasses.",
+    "enemytips": "Touch his glasses.",
+    "partype": "Coffee"
+    }
+
+###
+
+# @name deleteChampion
+DELETE {{baseUrl}}/63f905574aac23f31caccb71
+Content-Type: application/json
+###
+
+# @name updateChampion
+PUT {{baseUrl}}/63f905574aac23f31caccb71
+Content-Type: application/json
+
+    {
+        "title": "Your Mother"
+    }
+

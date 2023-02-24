@@ -5,6 +5,8 @@ const champSchema = new mongoose.Schema({
   name: String,
   title: String,
   lore: String,
+  allytips: [ String ],
+  enemytips: [ String ],
   info: [
     {
       attack: Number,

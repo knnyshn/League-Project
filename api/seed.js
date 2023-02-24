@@ -14,10 +14,3 @@ async function seed() {
   // Seed the database here
 }
 await mongoose.disconnect()
-
-// const champs = Object.values(champData.data)
-
-// DEAD
-// import mongoose from 'mongoose';
-// console.log("did this work");
-// await mongoose.disconnect()
