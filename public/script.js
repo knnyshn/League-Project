@@ -19,5 +19,5 @@ async function champData(champion) {
   const searchUrl = `https://league-project.vercel.app/api/search/?name=${champion}`
   const res = await fetch(searchUrl)
   const json = await res.json()
-  console.log(searchUrl)
+  console.log(json)
 }
