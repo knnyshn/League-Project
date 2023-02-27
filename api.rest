@@ -7,10 +7,10 @@
 
 # You'll need to switch to either `local` or `vercel` to get started.
 
-@baseUrl = {{host}}/api/
+@baseUrl = {{host}}/api
 
 # @name getChampions
-GET {{baseUrl}}
+GET {{baseUrl}}/
 ###
 
 # @name getChampion
@@ -18,7 +18,7 @@ GET {{baseUrl}}/Lissandra
 ###
 
 # @name createChampion
-POST {{baseUrl}}/
+POST {{baseUrl}}/create
 Content-Type: application/json
 
 
@@ -35,12 +35,12 @@ Content-Type: application/json
 ###
 
 # @name deleteChampion
-DELETE {{baseUrl}}/63f905574aac23f31caccb71
+DELETE {{baseUrl}}/63fcc388659a66bc56899cd5/delete
 Content-Type: application/json
 ###
 
 # @name updateChampion
-PUT {{baseUrl}}/63f905574aac23f31caccb71
+PUT {{baseUrl}}/63f905574aac23f31caccb71/update
 Content-Type: application/json
 
     {
