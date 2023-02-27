@@ -23,19 +23,20 @@ Content-Type: application/json
 
 
     {
-    "id": "Zanca",
-    "name": "Zanca",
-    "title": "the Removed Godskin Brother",
-    "lore": "Do whatever.",
-    "allytips": "Don't touch his glasses.",
-    "enemytips": "Touch his glasses.",
-    "partype": "Coffee"
+    "id": "Splurge",
+    "name": "Splurge",
+    "title": "the Whale of the West",
+    "lore": "Has to be number one on any leaderboard.",
+    "allytips": "Don't steal his creeps. You wouldn't like it when you steal his creeps.",
+    "enemytips": "Steal his creeps. Will tilt off the face of the universe. May cause excessive inflammatory statements and an aneurysm.",
+    "tags": ["Basement Dweller"],
+    "partype": "Money"
     }
 
 ###
 
 # @name deleteChampion
-DELETE {{baseUrl}}/63fcc388659a66bc56899cd5/delete
+DELETE {{baseUrl}}/63fcd64235f8206127ad6409/delete
 Content-Type: application/json
 ###
 

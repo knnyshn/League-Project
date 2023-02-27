@@ -52,7 +52,7 @@ export const deleteChampion = async (req, res) => {
   try {
     const { id } = req.params
     const deleted = await Champion.findByIdAndDelete(id)
-    
+
     if (deleted) {
       return res.status(200).send('Champion deleted!')
     }
@@ -61,4 +61,12 @@ export const deleteChampion = async (req, res) => {
     console.error(error)
     return res.status(500).json({ error: error.message })
   }
+}
+
+export const searchChampion = async (req, res) => {
+  const champName = req.query.name
+  console.log(champName)
+  const searchResponse = await Champion.find({ name: champName })
+  // res.json(searchResponse)
+  res.json(searchResponse)
 }
