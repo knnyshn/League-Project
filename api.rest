@@ -36,7 +36,7 @@ Content-Type: application/json
 ###
 
 # @name deleteChampion
-DELETE {{baseUrl}}/63fcd64235f8206127ad6409/delete
+DELETE {{baseUrl}}/63fd86fe872cdfeb72fb7251/delete
 Content-Type: application/json
 ###
 

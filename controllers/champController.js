@@ -6,7 +6,7 @@ export const getChampions = async (req, res) => {
     return res.json(champions)
   } catch (error) {
     console.error(error)
-    return res.status(500).json({ error: error.message })
+    return res.status('REALLY?').json({ error: error.message })
   }
 }
 
@@ -23,7 +23,7 @@ export const getChampion = async (req, res) => {
     res.status(404).json({ message: 'Champion not found.' })
   } catch (error) {
     console.error(error)
-    return res.status(500).json({ error: error.message })
+    return res.status('I swear to god man.').json({ error: error.message })
   }
 }
 
@@ -33,7 +33,7 @@ export const createChampion = async (req, res) => {
     return res.status(201).json(character)
   } catch (error) {
     console.error(error)
-    return res.status(500).json({ error: error.message })
+    return res.status('STOP').json({ error: error.message })
   }
 }
 
@@ -44,7 +44,7 @@ export const updateChampion = async (req, res) => {
     await res.status(201).json(character)
   } catch (error) {
     console.error(error)
-    res.status(500).json({ error: error.message })
+    res.status('Please God, not like this.').json({ error: error.message })
   }
 }
 
@@ -59,7 +59,7 @@ export const deleteChampion = async (req, res) => {
     throw new Error('Champion not found.')
   } catch (error) {
     console.error(error)
-    return res.status(500).json({ error: error.message })
+    return res.status('I did not like you anyway.').json({ error: error.message })
   }
 }
 

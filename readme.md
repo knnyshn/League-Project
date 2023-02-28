@@ -7,6 +7,7 @@ League Champion Compendium
 Database of League of Legends champions up until patch 13.4. 
 Database has all relevant information and links to said champions.
 Information includes three assets regarding default splash pictures, lore of each champion, base stats, enemy and ally tips, detailed stats and tags of each champion as well. 
+Has full CRUD capability for all of LoL's champions as well as a search function for said champions. 
 
 ## API ##
 http://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json
@@ -15,9 +16,12 @@ http://ddragon.leagueoflegends.com/cdn/img/champion/splash/["champion name"]_0.j
 http://ddragon.leagueoflegends.com/cdn/img/champion/loading/["champion name"]_0.jpg
 http://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/["champion name"].png
 
+## ROUTES ##
+
 | Route                 | HTTP Method | DB Action  | Description                         |
 |-----------------------|-------------|------------|-------------------------------------|
 | /api                  | GET         | INDEX      | Index of all the champions          |
+| /api/search           | GET         | SEARCH     | Search for specific champion        |
 | /api/create           | POST        | CREATE     | Create a champion                   |
 | /api/:id              | GET         | SHOW       | Show the specific champion          |
 | /api/:id/update       | PUT         | UPDATE     | Update champion with specific _id:  |
@@ -41,8 +45,18 @@ async function champAPI(champ) {
 ```
 **This shows that how I originally sourced API for a specific champion; however, I made a custom database with selected data from these several different points/assets for all champions to my specific schema. All information will be in champ.json under the db folder.
 
+```js
+async function champData(champion) {
+  const searchUrl = `https://league-project.vercel.app/api/search/?name=${champion}`
+  const res = await fetch(searchUrl)
+  const json = await res.json()
+  console.log(json)
+}
+```
+** New champion API. 
+
 ## MVP ##
-Have a full CRUD capable backend with all the champions with custom/detailed information that I felt relevant.  
+Have a full CRUD capable backend with all the champions with curated/detailed information.
 
 ## POST MVP ##
 To start on an aesthetically pleasing front end / polished search and display champions.
@@ -50,7 +64,7 @@ To start on an aesthetically pleasing front end / polished search and display ch
 ## GOALS ##
 Get backend done by end of Friday. Front End and MVP/Post MVP done over weekend. If possible, have a search bar and display for all the detailed info visible with some assets.
 
-## Plagiarism
+## Plagiarism ##
 
 Take a moment to re-familiarize yourself with the
 [plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md),
