@@ -24,7 +24,7 @@ http://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/["champion name"].png
 | /api/search           | GET         | SEARCH     | Search for specific champion        |
 | /api/create           | POST        | CREATE     | Create a champion                   |
 | /api/:id              | GET         | SHOW       | Show the specific champion          |
-| /api/:id/update       | PUT         | UPDATE     | Update champion with specific _id:  |
+| /api/:id/update       | PATCH       | UPDATE     | Update champion with specific _id:  |
 | /api/:id/delete       | DELETE      | DELETE     | Delete champion with specific _id:  |
 
 ## API SNIPPET ##
@@ -55,6 +55,21 @@ async function champData(champion) {
 ```
 ** New champion API. 
 
+## DATA MODEL ##
+"id":
+    "name": 
+    "title": 
+    "lore": 
+    "allytips": [ ],
+    "enemytips": [ ],
+    "info": [ ],
+    "splash": 
+    "loading": 
+    "icon": 
+    "tags": [ ],
+    "partype": 
+    "stats": [ ]
+
 ## MVP ##
 Have a full CRUD capable backend with all the champions with curated/detailed information.
 
@@ -63,6 +78,8 @@ To start on an aesthetically pleasing front end / polished search and display ch
 
 ## GOALS ##
 Get backend done by end of Friday. Front End and MVP/Post MVP done over weekend. If possible, have a search bar and display for all the detailed info visible with some assets.
+
+
 
 ## Plagiarism ##
 
