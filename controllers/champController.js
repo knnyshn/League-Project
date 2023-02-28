@@ -13,7 +13,6 @@ export const getChampions = async (req, res) => {
 export const getChampion = async (req, res) => {
   try {
     const { id } = req.params
-    // console.log('id: ' + id)
     const champion = await Champion.find({ name: id })
 
     if (Champion) {
@@ -67,6 +66,5 @@ export const searchChampion = async (req, res) => {
   const champName = req.query.name
   console.log(champName)
   const searchResponse = await Champion.find({ name: champName })
-  // res.json(searchResponse)
   res.json(searchResponse)
 }
